@@ -198,3 +198,23 @@ body {
     box-shadow: 0px 0px 0px #000;
     transform: translate(2px, 2px);
 }
+
+
+/* MEDIA QUERIES PARA RESPONSIVE */
+
+/* --- Diseño para Celulares --- */
+@media (max-width: 600px) {
+  .grid-container { /* Cambia .grid-container por el nombre de tu clase del grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Fuerza 2 columnas */
+    gap: 10px; /* Un poco menos de espacio para aprovechar la pantalla */
+    padding: 10px;
+  }
+}
+
+/* --- Opcional: Para celulares muy flaquitos (menos de 400px) --- */
+@media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna si es muy pequeño */
+  }
+}
