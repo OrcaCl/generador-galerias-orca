@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | orca.cl</title>
+    <link rel="stylesheet" href="assets/estilos.css">
+</head>
+
+<body>
+
+    <main class="contenedor-principal">
+        <header class="cabecera-sitio">
+            <a href="index.html">
+                <img src="assets/orca_web_t_xlink_directo.svg" class="logo-orca" alt="orca.cl">
+            </a>
+
+            <nav class="migas-pan">
+                <a href="index.html">INICIO</a> / <span id="nombre-breadcrumb">...</span>
+            </nav>
+
+            <h1 id="titulo-galeria" class="titulo-galeria">Cargando...</h1>
+            <p id="fecha-galeria" class="subtitulo-fecha"></p>
+        </header>
+
+        <section id="contenedor-fotos" class="rejilla-galeria">
+            <!-- Acá van las fotos en sus respectivos cards -->
+
+
+
+        </section>
+
+        <div id="contenedor-boton-mas" style="text-align: center; margin: 40px 0; display: none;">
+            <button id="boton-cargar-mas" class="boton-accion">CARGAR MÁS FOTOS</button>
+        </div>
+    </main>
+
+    <!-- Acá va el visor modal -->
+    <div id="modal-visor" class="modal-oculto">
+        <span id="cerrar-modal">&times;</span>
+
+        <button id="anterior-foto" class="nav-modal">❮</button>
+        <button id="siguiente-foto" class="nav-modal">❯</button>
+
+        <img id="imagen-modal" src="" alt="Vista ampliada">
+        <div id="descripcion-modal"></div>
+    </div>
+
+    <!-- Acá está el origen de datos de la galeria -->
+    <script src="assets/galeria.js"></script>
+</body>
+
+</html>

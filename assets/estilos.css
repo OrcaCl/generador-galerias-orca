@@ -1,0 +1,200 @@
+/* --- Estructura Global --- */
+:root {
+ 	--bgcolor-global: #41557d;
+	--bgcolor-galeria: #f4f4f4;
+	--ff-color-global: #f1f1f1;
+	--ff-color-migas: #cccccc;
+	--ff-color-fechas: #6dc8ff;
+	--ff-color-polaroid: #666666;
+}
+
+body { 
+    font-family: 'Courier New', monospace; 
+    background: var(--bgcolor-global); 
+    margin: 0; 
+    padding: 20px; 
+    color: var(--ff-color-global);
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Cabecera y Navegación --- */
+.cabecera-sitio { 
+    text-align: center; 
+    margin-bottom: 50px; 
+}
+
+.logo-orca { 
+    width: 150px; 
+    height: auto; 
+    margin-bottom: 20px; 
+}
+
+.migas-pan { 
+    font-size: 0.9rem; 
+    color: var(--ff-color-migas); 
+    margin-bottom: 30px; 
+    text-transform: uppercase; 
+}
+
+.migas-pan a { 
+    color: var(--ff-color-fechas); /* Usamos el celeste para que resalte */
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.migas-pan a:hover {
+    text-decoration: underline;
+}
+
+.titulo-galeria { 
+    font-size: 2rem; 
+    letter-spacing: 2px; 
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.subtitulo-fecha { 
+    font-size: 1.1rem; 
+    color: var(--ff-color-fechas); 
+    margin-bottom: 40px; 
+}
+
+/* --- Grid de Layout --- */
+.rejilla-galeria { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 30px; 
+}
+
+/* --- Componente Polaroid (Común) --- */
+.tarjeta-polaroid { 
+    background: white; 
+    padding: 15px 15px 40px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    text-decoration: none; 
+    color: var(--ff-color-polaroid);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-polaroid:hover { 
+    transform: rotate(-2deg) translateY(-8px); /* Se eleva un poquito más */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4), 
+                0 0 15px var(--ff-color-fechas); /* El resplandor celeste */
+}
+
+.foto-polaroid { 
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border: 1px solid #eee;
+    background: #fafafa;
+}
+
+.etiqueta-polaroid { 
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 0.95rem; 
+    line-height: 1.4;
+}
+
+/* --- Visor Modal --- */
+#modal-visor {
+    display: none; /* Se activa con JS */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Evita clics cuando está oculto */
+	
+}
+
+#modal-visor.mostrar {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#imagen-modal {
+    max-width: 90%;
+    max-height: 80%;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#descripcion-modal {
+    color: white;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+#cerrar-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-modal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.nav-modal:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#anterior-foto { left: 10px; }
+#siguiente-foto { right: 10px; }
+
+/* Ocultar flechas en móviles si estorban mucho */
+@media (max-width: 600px) {
+    .nav-modal { font-size: 2rem; padding: 10px; }
+}
+
+.boton-accion {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 15px 30px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.boton-accion:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(2px, 2px);
+}

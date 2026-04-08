@@ -1,0 +1,20 @@
+# --- Ignorar los alphas y bestias xD --
+_older/
+_v0.2/
+_v0.3/
+galeria-web.code-workspace
+
+# --- Ignorar la carne (Fotos) ---
+galerias/**/*.jpg
+galerias/**/*.jpeg
+galerias/**/*.png
+galerias/**/*.webp
+
+# --- Ignorar basura de sistema ---
+node_modules/
+.DS_Store
+Thumbs.db
+.optimizado
+
+# Asegurar que los JSON se suban siempre aunque estén dentro de galerias/
+!galerias/**/*.json

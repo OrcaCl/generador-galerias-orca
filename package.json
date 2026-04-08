@@ -1,0 +1,24 @@
+{
+  "name": "orca-galeria-web",
+  "version": "1.0.0",
+  "description": "Galeria Fotográfica del Año 2026",
+  "keywords": [
+    "galeria",
+    "html",
+    "nodejs",
+    "javascript",
+    "json",
+    "images"
+  ],
+  "license": "MIT",
+  "author": "Orlando Caffarena Aros",
+  "type": "commonjs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx --offline serve --no-clipboard"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}

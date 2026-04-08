@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "costabeat-febrero",
+    "titulo": "Costabeat Nenazo Karen Echev (ARG)",
+    "fecha": "2026-02-27",
+    "portada": "costabeat-febrero/foto_0.jpg",
+    "cantidad": 98
+  },
+  {
+    "slug": "costabeat-waves-bros",
+    "titulo": "Costabeat Nenazo Waves Brothers",
+    "fecha": "2026-04-03",
+    "portada": "costabeat-waves-bros/foto_0.jpg",
+    "cantidad": 119
+  },
+  {
+    "slug": "nenazo4",
+    "titulo": "Casi Último Nenazo",
+    "fecha": "2026-02-28",
+    "portada": "nenazo4/foto_0.jpg",
+    "cantidad": 114
+  },
+  {
+    "slug": "nenazo3",
+    "titulo": "Tercer Nenazo",
+    "fecha": "2026-02-21",
+    "portada": "nenazo3/foto_0.jpg",
+    "cantidad": 100
+  },
+  {
+    "slug": "nenazo2",
+    "titulo": "Segundo Nenazo",
+    "fecha": "2026-02-14",
+    "portada": "nenazo2/foto_0.jpg",
+    "cantidad": 120
+  },
+  {
+    "slug": "lalobera-redbull-lolla-skate",
+    "titulo": "La Lobera / Red Bull Lola Sessions - Clinica Skate",
+    "fecha": "2026-02-10",
+    "portada": "lalobera-redbull-lolla-skate/foto_0.jpg",
+    "cantidad": 257
+  },
+  {
+    "slug": "nenazo-santo-pecado",
+    "titulo": "Nenazo Santo Pecado 2026",
+    "fecha": "2026-04-04",
+    "portada": "nenazo-santo-pecado/01 Nenazo Santo Pecado.jpeg",
+    "cantidad": 76
+  },
+  {
+    "slug": "nenazo1",
+    "titulo": "Primer Nenazo",
+    "fecha": "2026-02-07",
+    "portada": "nenazo1/foto_0.jpg",
+    "cantidad": 205
+  }
+]
