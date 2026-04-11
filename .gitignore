@@ -4,11 +4,14 @@ _v0.2/
 _v0.3/
 galeria-web.code-workspace
 
-# --- Ignorar la carne (Fotos) ---
+# --- Ignorar la carne (Fotos y archivos pesados) ---
+# Esto es más agresivo y efectivo para subcarpetas profundas
 galerias/**/*.jpg
 galerias/**/*.jpeg
 galerias/**/*.png
 galerias/**/*.webp
+# Bloqueamos todos los archivos de imagen
+galerias/**/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}
 
 # --- Ignorar basura de sistema ---
 node_modules/
@@ -18,3 +21,4 @@ Thumbs.db
 
 # Asegurar que los JSON se suban siempre aunque estén dentro de galerias/
 !galerias/**/*.json
+!galerias/**/*.optimizado|
